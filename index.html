@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=0.25">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="sass/main.css">
   <title>Document</title>
@@ -60,6 +60,79 @@
       </div>
     </div>
   </header>
+
+  <div class="main-checkout">
+    <div class="checkout">
+
+      <h2>Оформление заказа</h2>
+      <div class="checkout-choice">
+        <div class="checkout-choice-item1">Физическое лицо</div>
+        <div class="checkout-choice-item2">Юридическое лицо</div>
+      </div>
+
+      <h3>Контактные данные</h3>
+      <form class="contacts">
+        <div class="contacts-name-mail">
+            <label for="">Имя</label>
+            <input type="text" name="fio" placeholder="Александр">
+            <label for="">Эл.почта</label>
+            <input type="email" name="fio" placeholder="pushkin@mail.ru">
+        </div>
+        <div class="contacts-lname-tel">
+            <label for="">Фамилия</label> 
+            <input type="text" name="fio" placeholder="Пушкин">
+            <label for="">Номер телефона</label>
+            <div class="contacts-tel">
+              <div class="num">+7</div>
+              <input type="phone" name="fio" placeholder="999 432 34-21">
+            </div>
+          </div>
+      </form>
+
+      <h3>Адрес и способ доставки</h3>
+      <form class="delivery">
+        <div class="delivery-country">
+          <label for="">Страна</label>
+          <select name="" id="">
+              <option>Россия</option>
+          </select> 
+        </div>
+        <div class="delivery-city">
+            <label for="">Город</label>
+            <input type="text" name="city" placeholder="Москва">
+          </div>
+      </form>
+
+      <h4>Способ доставки</h4>
+      <form action="#">
+        <div class="checkbox-choice">
+          <div class="checkbox-choice-courier">
+            <p>
+              <input name="radio" type="radio" class="radio" checked>
+              <label for="test1">Доставка курьерской службой — 710 ₽</label>
+              <p>(Срок доставки — 1–3 дня)</p>
+            </p> 
+          </div>
+          <div class="checkbox-choice-car">
+            <p>
+              <input name="radio" type="radio" class="radio">
+              <label for="test2">Доставка транспортной компанией — 210 ₽</label>
+              <p>(Данный вид доставки возможен при полной 
+                  предоплате заказа. Срок доставки — 3–5 дней)
+              </p>
+            </p>
+          </div>
+          <div class="checkbox-choice-pickup">
+            <p>
+              <input name="radio" type="radio" class="radio">
+              <label for="test3">Самовывоз — 180 ₽</label>
+              <p>Доставка до пункта самовывоза займет 2–3 дня</p>
+            </p> 
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
   
 </body>
 </html>

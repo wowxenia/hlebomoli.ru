@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,8 +10,8 @@ body {
 
 header {
   height: 365px;
-  width: 1920px;
-  background: url("../image/header-picture.png");
+  background: url("../image/header-picture.png") no-repeat bottom center;
+  background-size: cover;
 }
 
 .sprite {
@@ -192,6 +197,8 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
+  padding-top: 10px;
+  border-top: 1px solid #c2b7b0;
 }
 
 .main-navigation-name {
@@ -252,5 +259,288 @@ header {
   font-size: 14px;
   margin: 0;
   display: inline;
+}
+
+.main-checkout {
+  background: url("../image/bottom-header.png") no-repeat top center;
+  height: 300px;
+  background-size: cover;
+}
+
+.checkout {
+  width: 1030px;
+  margin: auto;
+  background: white;
+}
+
+.checkout h2 {
+  color: #461f02;
+  font-family: Georgia;
+  font-size: 35px;
+  font-style: italic;
+  margin: 0 0 33px 32px;
+  padding-top: 45px;
+}
+
+.checkout h3 {
+  color: #461f02;
+  font-family: Georgia;
+  font-size: 25px;
+  font-style: italic;
+  margin: 42px 0 39px 29px;
+}
+
+.checkout h4 {
+  color: #461f02;
+  font-family: Georgia;
+  font-size: 19px;
+  font-style: italic;
+  line-height: 35px;
+  margin: 42px 0 39px 29px;
+}
+
+.checkout-choice {
+  width: 389px;
+  height: 49px;
+  border: 1px solid #f0e4ca;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 31px;
+}
+
+.checkout-choice-item1, .checkout-choice-item2 {
+  width: 195px;
+  color: #461f02;
+  font-family: Calibri;
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid #f0e4ca;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.checkout-choice-item1:hover, .checkout-choice-item2:hover {
+  background-color: #fdfcfa;
+}
+
+.checkout-choice-item1:active, .checkout-choice-item2:active {
+  border: 1px dashed #d15b0a;
+}
+
+.contacts {
+  width: 390px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 30px;
+}
+
+.contacts-name-mail {
+  width: 390px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts-lname-tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts label {
+  color: #817068;
+  font-family: Calibri;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 8px 10px;
+}
+
+.contacts input {
+  width: 185px;
+  height: 35px;
+  margin-bottom: 35px;
+  color: #817068;
+  font-family: Calibri;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 11px;
+  outline-color: #e64545;
+  border: 1px solid #c4b7b1;
+  border-radius: 2px;
+}
+
+.contacts-tel {
+  position: relative;
+}
+
+.contacts-tel input {
+  width: 159px !important;
+  height: 35px;
+  padding-left: 44px;
+}
+
+.num {
+  width: 38px;
+  height: 35px;
+  border: 1px solid #c4b7b1;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #817068;
+  font-family: Calibri;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.delivery {
+  width: 390px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 30px;
+}
+
+.delivery-city, .delivery-country {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.delivery-city label, .delivery-country label {
+  color: #817068;
+  font-family: Calibri;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0 0 8px 10px;
+}
+
+.delivery-city select, .delivery-city input, .delivery-country select, .delivery-country input {
+  width: 185px;
+  height: 35px;
+  margin-bottom: 35px;
+  color: #461f02;
+  font-family: Calibri;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 11px;
+  outline-color: #e64545;
+  border: 1px solid #c4b7b1;
+  border-radius: 2px;
+}
+
+.checkbox-choice {
+  width: 390px;
+  height: 222px;
+}
+
+.checkbox-choice-courier, .checkbox-choice-car, .checkbox-choice-pickup {
+  width: 390px;
+  min-height: 70px;
+  border: 1px dashed #f0e4ca;
+}
+
+.checkbox-choice-courier p, .checkbox-choice-car p, .checkbox-choice-pickup p {
+  color: #c4b7b1;
+  font-family: Calibri;
+  font-size: 13px;
+  font-weight: 400;
+  margin-left: 30px;
+  padding: 0;
+  max-width: 100%;
+}
+
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type="radio"]:checked + label,
+input[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #5e2d16;
+  font-family: Calibri;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+input[type="radio"]:checked + label:before,
+input[type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+}
+
+input[type="radio"]:checked + label:after,
+input[type="radio"]:not(:checked) + label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #ff6900;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+input[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+input[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 /*# sourceMappingURL=main.css.map */
