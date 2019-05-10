@@ -106,7 +106,21 @@ header
     font-family: Calibri
     font-size: 13px
     font-weight: 400
-    line-height: 85px
+    &::-webkit-input-placeholder
+      color: #766259
+      font-family: Calibri
+      font-size: 13px
+      font-weight: 400
+    &::-moz-placeholder
+      color: #766259
+      font-family: Calibri
+      font-size: 13px
+      font-weight: 400
+    &:-ms-input-placeholder
+      color: #766259
+      font-family: Calibri
+      font-size: 13px
+      font-weight: 400 
   i 
     width: 13px
     height: 15px
@@ -134,8 +148,12 @@ header
   display: flex
   justify-content: space-between
   margin: 0 auto
-  padding-top: 10px
   border-top: 1px solid #c2b7b0
+  .cart
+    width: 40px
+    height: 40px
+    background: url('../image/cart.png') no-repeat
+    background-position: 5px 5px
   &-name
     width: 781px 
     ul
@@ -156,11 +174,7 @@ header
     width: 135px
     height: 50px
     display: flex
-    justify-content: flex-end
-    i 
-      width: 36px
-      height: 34px
-      background-position: -295px -5px
+    justify-content: flex-end    
     &-price 
       margin: 16px 0 0
       color: #461f02;
@@ -175,14 +189,123 @@ header
 // Main
 
 .main-checkout
-  background: url('../image/bottom-header.png') no-repeat top center
+  position: relative
+  width: 100%
+  min-height: 1645px
+.wood
+  background: url('../image/bottom-header.png') no-repeat 0 -40px
   height: 300px
   background-size: cover
+  position: relative
+  width: 100%
+.b_panel
+  position: absolute
+  display: block
+  overflow: hidden
+  width: 100%
+  min-height: 120px
+  max-width: 1030px
+  // height: 14px;
+  margin: -142px auto 0
+  background: url('../image/b_panel.png') no-repeat
+
+.white-power
+  background: white
+
+.wrap-content
+  display: flex
+  justify-content: space-between
+  
+.your-choice
+  display: flex
+  flex-direction: column
+  width: 308px
+  height: 316px
+  border: 1px solid #f0e4ca
+  margin-right: 30px
+  position: absolute
+  right: 30px
+  h3 
+    padding: 18px 0 24px 18px 
+    color: #461f02
+    font-family: Georgia
+    font-size: 25px
+    font-style: italic
+    font-weight: normal
+    margin: 0!important    
+  &-goods
+    display: flex
+    justify-content: space-between
+    p 
+      margin: 0
+    .goods-item 
+      width: 185px
+      color: #766259
+      font-family: Calibri
+      font-size: 14px
+      font-weight: 400
+      padding-left: 19px
+      margin-bottom: 15px
+    .goods-price
+      color: #461f02
+      font-family: Calibri
+      font-size: 14px
+      font-weight: 400
+      padding-right: 21px
+  .price-delivery
+    border-top: 1px dashed #f0e4ca
+    border-bottom: 1px dashed #f0e4ca
+    background-color: #fdfcfa
+    height: 101px
+    display: flex
+    flex-direction: column
+    padding-left: 19px
+    padding-top: 15px
+    padding-right: 20px
+    padding-bottom: 20px
+    .cost, .cost1, .cost2
+      display: flex
+      justify-content: space-between
+      padding-bottom: 10px
+      p 
+        color: #766259
+        font-family: Calibri
+        font-size: 14px
+        font-weight: 400
+        margin: 0
+      .cost-color
+        color: #461f02
+        font-family: Calibri
+        font-size: 14px
+        font-weight: 400
+
+  .full-price
+    background-color: #fcfaf5
+    height: 60px
+    display: flex
+    justify-content: space-between
+    padding-left: 19px
+    padding-right: 20px
+    p 
+      color: #461f02
+      font-family: Calibri
+      font-size: 14px
+      font-weight: 400
+      margin: auto 0
+    .full-cost
+      color: #461f02
+      font-family: Calibri
+      font-size: 20px
+      font-weight: 700
+      margin: auto 0
+      
 
 .checkout
   width: 1030px
+  height: 1000px
   margin: auto 
-  background: white  
+  position: relative
+  background: white
   h2 
     color: #461f02
     font-family: Georgia
@@ -195,38 +318,43 @@ header
     font-family: Georgia
     font-size: 25px
     font-style: italic
-    margin: 42px 0 39px 29px
+    margin: 42px 0 21px 29px
   h4
     color: #461f02
     font-family: Georgia
     font-size: 19px
     font-style: italic
     line-height: 35px
-    margin: 42px 0 39px 29px
+    margin: 25px 0 15px 29px
 
 .checkout-choice
   width: 389px
   height: 49px  
-  border: 1px solid #f0e4ca
+  // border: 1px solid #f0e4ca
   display: flex
   margin-left: 31px
+  border-radius: 4px 0 0 4px
   &-item1,
   &-item2
     width: 195px
     color: #461f02
     font-family: Calibri
     font-size: 15px
-    font-weight: 400
-    border: 1px solid #f0e4ca
+    font-weight: 400    
     display: flex
     align-items: center
     justify-content: center
-    cursor: pointer
-    &:hover
-      background-color: #fdfcfa
-    &:active
-      border: 1px dashed #d15b0a
-              
+    cursor: pointer  
+  &-item1    
+    background-color: #fdfcfa
+    border: 1px solid #f0e4ca
+    border-radius: 4px 0 0 4px
+  &-item2  
+    border: 1px dashed #d15b0a   
+    border-radius: 0 4px 4px 0
+    p 
+      margin: 0
+      border-bottom: 1px dotted #d6d0cd 
 .contacts
   width: 390px
   height: auto
@@ -283,7 +411,7 @@ header
   display: flex
   justify-content: space-between
   margin-left: 30px
-  &-city, &-country 
+  &-city, &-country
     display: flex
     flex-direction: column
     label
@@ -295,7 +423,6 @@ header
     select, input
       width: 185px
       height: 35px
-      margin-bottom: 35px
       color: #461f02
       font-family: Calibri
       font-size: 16px
@@ -303,86 +430,279 @@ header
       padding-left: 11px
       outline-color: #e64545
       border: 1px solid #c4b7b1
-      border-radius: 2px    
+      border-radius: 2px
+  &-country
+    select
+      outline: none    
 
 .checkbox-choice
   width: 390px
-  height: 222px
+  min-height: 222px
+  margin-left: 30px
+  margin-bottom: 29px
   &-courier, &-car, &-pickup
     width: 390px
     min-height: 70px
     border: 1px dashed #f0e4ca
+    label
+      font-size: 17px 
+      color: #5e2d16
+      font-family: Calibri
+      font-weight: 600
     p 
       color: #c4b7b1
       font-family: Calibri
       font-size: 13px
       font-weight: 400
-      // margin: 0px auto 20px 46px
-      margin-left: 30px
+      margin-top: 0
       padding: 0
       max-width: 100%
-    // input
-    //   margin: 17px 14px 39px 16px
+ 
+.control 
+	display: block 
+	position: relative 
+	padding-left: 50px 
+	margin-bottom: 5px 
+	padding-top: 17px 
+	cursor: pointer
+	input 
+		position: absolute 
+		z-index: -1 
+		opacity: 0 
+		&:checked 
+			& ~ .control_indicator 
+				background: white 
+				&:after 
+					display: block 
+		&:disabled 
+			& ~ .control_indicator 
+				background: #e6e6e6 
+				opacity: 0.6 
+				pointer-events: none 
+.control_indicator 
+	position: absolute 
+	top: 20px 
+	left: 15px 
+	height: 20px 
+	width: 20px 
+	background: white 
+	border: 1px solid #c4b7b1 
+	&:after 
+		box-sizing: unset 
+		content: '' 
+		position: absolute 
+		display: none 
+.control-radio 
+	.control_indicator 
+		border-radius: 50% 
+		&:after 
+			left: 5px 
+			top: 5px 
+			height: 8px 
+			width: 8px 
+			border-radius: 50% 
+			background: #ff6900 
+	input 
+		&:disabled 
+			& ~ .control_indicator 
+				&:after 
+					background: #7b7b7b 
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator 
+	background: #f5f5f5 
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator 
+	background: #ffffff 
 
 
-    
-input[type="radio"]:checked,
-input[type="radio"]:not(:checked) 
-  position: absolute
-  left: -9999px
+.pickup
+  display: flex
+  flex-direction: column
+  margin-left: 30px
+  margin-bottom: 42px
+  label
+    color: #817068
+    font-family: Calibri
+    font-size: 14px
+    font-weight: 400
+    margin: 0 0 8px 10px    
+  select
+    width: 185px
+    height: 35px
+    color: #461f02
+    font-family: Calibri
+    font-size: 16px
+    font-weight: 400
+    padding-left: 11px
+    outline: none
+    border: 1px solid #c4b7b1
+    border-radius: 2px
+    margin-bottom: 21px
 
-input[type="radio"]:checked + label,
-input[type="radio"]:not(:checked) + label
+.comment
+  margin-left: 30px
+  margin-bottom: 75px
+  max-width: 390px      
+  textarea
+    width: 390px
+    height: 180px
+    border-radius: 2px
+    border: 1px solid #c4b7b1
+    margin-bottom: 6px
+  p 
+    position: relative
+    input
+      width: 226px
+      height: 46px
+      border-radius: 2px
+      border: 1px solid #ff6900
+      background: white
+      color: #ff7700
+      font-family: Calibri
+      font-size: 14px
+      font-weight: 700
+      line-height: 35px
+      cursor: pointer
+      
+  span
+    position: absolute
+    right: 28px
+    top: 18px
+    width: 7px
+    height: 12px
+    background: url('../image/arrow-button.png') no-repeat
+
+.submit
+  padding: 0 25px 0 0
+
+.submit-position
+  margin: 0 0 0 164px
+
+// FOOTER
+
+footer
+  background: url('../image/footer-picture.png') no-repeat top center
+  height: 303px
+  background-size: cover!important
   position: relative
-  padding-left: 28px
-  cursor: pointer
-  line-height: 20px
-  display: inline-block
-  color: #5e2d16
-  font-family: Calibri
-  font-size: 17px
-  font-weight: 400
+  
+.footer-main
+  width: 971px
+  padding-top: 20px
+  display: flex
+  justify-content: space-between
+  margin: 0 auto
+  &-item
+    width: 971px
+    // height: 151px    
+    &-catalog
+      width: 200px
+      // height: 105px
+    h4 
+      color: #461f02
+      font-family: Georgia
+      font-size: 17px
+      font-style: italic
+      padding: 0
+    ul 
+      padding: 0
+    .column-count 
+      column-count: 2
+    li, p
+      list-style: none
+      max-width: 100%      
+      display: inline-block
+      list-style-type: none
+      list-style-position: inside
+      color: #766259
+      font-family: Calibri
+      font-size: 14px
+      font-weight: 400
+      margin: 0
+      a 
+        text-decoration: none
+        color: #766259
+        font-family: Calibri
+        font-size: 14px
+        font-weight: 400
+        border-bottom: 1px solid #d0c7c1
+    
+    &-info 
+      width: 152px
+    &-club 
+      position: relative
+    form 
+      position: relative
+    input[type=text]
+      width: 215px
+      height: 40px
+      margin-top: 13px 
+      padding-left: 14px
+      &::-webkit-input-placeholder
+        color: #766259
+        font-family: Calibri
+        font-size: 15px
+        font-weight: 400
+      &::-moz-placeholder
+        color: #766259
+        font-family: Calibri
+        font-size: 15px
+        font-weight: 400
+      &:-ms-input-placeholder
+        color: #766259
+        font-family: Calibri
+        font-size: 15px
+        font-weight: 400 
+    input[type=submit] 
+      height: 40px
+      width: 43px
+      position: absolute
+      top: 13px
+      right: 28px
+      border-radius: 0 2px 2px 0
+      cursor: pointer
+      border: none
+      background: url('../image/arrow-submit-white.png')
 
-input[type="radio"]:checked + label:before,
-input[type="radio"]:not(:checked) + label:before 
-  content: ''
-  position: absolute
-  left: 0
-  top: 0
-  width: 18px
-  height: 18px
-  border: 1px solid #ddd
-  border-radius: 100%
-  background: #fff
+.footer-line
+  margin: 20px auto
+  width: 970px
+  i
+    width: 970px
+    height: 9px
+    background-position: -5px -54px
+    margin: 9px auto
 
-input[type="radio"]:checked + label:after,
-input[type="radio"]:not(:checked) + label:after 
-  content: ''
-  width: 12px
-  height: 12px
-  background: #ff6900
-  position: absolute
-  top: 4px
-  left: 4px
-  border-radius: 100%
-  -webkit-transition: all 0.2s ease
-  transition: all 0.2s ease
-
-input[type="radio"]:not(:checked) + label:after
-  opacity: 0
-  -webkit-transform: scale(0)
-  transform: scale(0)
-
-input[type="radio"]:checked + label:after
-  opacity: 1
-  -webkit-transform: scale(1)
-  transform: scale(1) 
-    // label
-    //   color: #5e2d16
-    //   font-family: Calibri
-    //   font-size: 17px
-    //   font-weight: 400
-    //   padding: 0
-   
-
-
+.social
+  width: 970px
+  margin: -16px auto
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &-copyright
+    p
+      color: #766259
+      font-family: Calibri
+      font-size: 13px
+      font-weight: 400
+      margin: 0
+  &-media
+    a
+      width: 27px
+      height: 27px
+    .vk
+      width: 27px
+      height: 27px
+      background-position: -723px -73px
+    .fb
+      width: 27px
+      height: 27px
+      background-position: -925px -5px
+    .in
+      width: 27px
+      height: 27px
+      background-position: -686px -73px
+    .yt
+      width: 27px
+      height: 27px
+      background-position: -760px -73px
