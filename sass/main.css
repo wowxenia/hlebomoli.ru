@@ -23,6 +23,10 @@ header {
   background-size: cover;
 }
 
+.map1, .map2 {
+  display: none;
+}
+
 .sprite {
   background-image: url("../image/i.png");
   background-repeat: no-repeat;
@@ -624,11 +628,11 @@ header {
   font-weight: 400;
 }
 
-.error-email, .error-name, .error-lname {
+.error-email, .error-name, .error-lname, .error-submit {
   display: none;
 }
 
-.error-email p, .error-name p, .error-lname p {
+.error-email p, .error-name p, .error-lname p, .error-submit p {
   width: 184px;
   height: 21px;
   margin: 0;
@@ -665,6 +669,23 @@ header {
   position: absolute;
   top: 66px;
   right: -9px;
+}
+
+.error-submit {
+  width: 184px;
+  height: 21px;
+  margin: 0;
+  color: #958781;
+  font-family: Calibri;
+  font-size: 11px;
+  font-style: italic;
+  position: absolute;
+  bottom: 112px;
+  left: 27px;
+}
+
+.error-submit p {
+  width: 140px;
 }
 
 .delivery {
@@ -866,6 +887,7 @@ header {
   margin-left: 30px;
   margin-bottom: 75px;
   max-width: 390px;
+  display: relative;
 }
 
 .comment textarea {
@@ -874,6 +896,7 @@ header {
   border-radius: 2px;
   border: 1px solid #c4b7b1;
   margin-bottom: 6px;
+  outline: none;
 }
 
 .comment p {

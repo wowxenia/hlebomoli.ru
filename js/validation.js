@@ -8,9 +8,32 @@ function isCyrillic(emailAddress) {
   return pattern.test(emailAddress);
 }
 
+function isItTag(message) {
+  var pattern = /<(.|\n)*?>/g;
+  return pattern.test(message);
+}
+
 $( document ).ready(function() {
 
   $("#phone").mask("999 999 99-99");
+
+  $(".submit").on("click",function(){
+    var textarea = $('#textarea').val();
+    if (isItTag(textarea) == true) {
+      e.stopImmediatePropagation();
+      e.preventDefault(); // Cancel the submit
+      return false; // Exit the .each loop
+    }
+  });
+
+  $('#textarea').on('keyup', function() {
+    var textarea = this.value;
+    if (isItTag(textarea) == true) {
+      $(this).css({'border' : '2px solid #e64545'});
+      $('.error-submit p').text('Это поле не должно содержать HTML-теги.');
+      $('.error-submit').css({'display' : 'block'}); 
+    }
+  });
 
   $('#email').on('keyup', function() {
     var email = this.value;
