@@ -17,23 +17,21 @@ $( document ).ready(function() {
 
   $("#phone").mask("999 999 99-99");
 
-  $(".submit").on("click",function(){
+  $("#textarea").on('keyup', function(){
     var textarea = $('#textarea').val();
+    console.log(textarea);
     if (isItTag(textarea) == true) {
-      e.stopImmediatePropagation();
-      e.preventDefault(); // Cancel the submit
-      return false; // Exit the .each loop
-    }
-  });
-
-  $('#textarea').on('keyup', function() {
-    var textarea = this.value;
-    if (isItTag(textarea) == true) {
+      $(".submit").prop('disabled', true);
       $(this).css({'border' : '2px solid #e64545'});
       $('.error-submit p').text('Это поле не должно содержать HTML-теги.');
       $('.error-submit').css({'display' : 'block'}); 
+    } else {
+      $(".submit").prop('disabled', false);
+      $(this).css({'border' : '1px solid #c4b7b1'}); 
+      $('.error-submit').css({'display' : 'none'}); 
     }
   });
+
 
   $('#email').on('keyup', function() {
     var email = this.value;
@@ -41,10 +39,12 @@ $( document ).ready(function() {
       $(this).css({'border' : '2px solid #e64545'});
       $('.error-email p').text('Это поле должно содержать адрес электронной почты в латинице.');
       $('.error-email').css({'display' : 'block'}); 
+      $(".submit").prop('disabled', true);
   }
       else {
       $(this).css({'border' : '1px solid #c4b7b1'});
       $('.error-email').css({'display' : 'none'});
+      $(".submit").prop('disabled', false);
       }      
 });
 
@@ -54,10 +54,12 @@ $('#name').on('keyup', function() {
     $(this).css({'border' : '2px solid #e64545'});
     $('.error-name p').text('Это поле должно содержать имя на русском языке.');
     $('.error-name').css({'display' : 'block'}); 
+    $(".submit").prop('disabled', true);
 }
     else {
     $(this).css({'border' : '1px solid #c4b7b1'});
     $('.error-name').css({'display' : 'none'});
+    $(".submit").prop('disabled', false);
     }      
 });
 
@@ -67,10 +69,12 @@ $('#lname').on('keyup', function() {
     $(this).css({'border' : '2px solid #e64545'});
     $('.error-lname p').text('Это поле должно содержать фамилию на русском языке.');
     $('.error-lname').css({'display' : 'block'}); 
+    $(".submit").prop('disabled', true);
 }
     else {
     $(this).css({'border' : '1px solid #c4b7b1'});
     $('.error-lname').css({'display' : 'none'});
+    $(".submit").prop('disabled', false);
     }      
 });
 

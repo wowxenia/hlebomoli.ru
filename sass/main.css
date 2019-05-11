@@ -23,6 +23,10 @@ header {
   background-size: cover;
 }
 
+.container {
+  height: auto;
+}
+
 .map1, .map2 {
   display: none;
 }
@@ -297,7 +301,7 @@ header {
 .main-checkout {
   position: relative;
   width: 100%;
-  min-height: 1645px;
+  height: 1945px;
 }
 
 .wood {
