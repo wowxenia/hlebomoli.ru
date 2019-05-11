@@ -9,6 +9,7 @@
   <script src="js/jquery.maskedinput.js"></script>
   <script src="js/validation.js"></script>
   <script src="js/map.js"></script>
+  <script src="js/price.js"></script>
 </head>
 <body>
   <header>
@@ -97,8 +98,8 @@
                   <p class="cost-color">18 344 ₽</p>
               </div>
               <div class="cost2">
-                  <p>Самовывоз</p>
-                  <p class="cost-color">180 ₽</p>
+                  <p id="self-pickup-label">Самовывоз</p>
+                  <p class="cost-color" id="self-pickup"></p>
               </div>
             </div>
 
@@ -150,7 +151,7 @@
         <div class="control-group">
             <div class="checkbox-choice-courier">
               <label class="control control-radio">
-                  Доставка курьерской службой — 710 ₽
+                  <span>Доставка курьерской службой</span> — <b>710</b> ₽
                       <input type="radio" name="radio" id="input-courier-delivery" checked="checked"/>
                       <p>(Срок доставки — 1–3 дня)</p>
                   <div class="control_indicator"></div>
@@ -158,7 +159,7 @@
             </div>
             <div class="checkbox-choice-car">
               <label class="control control-radio">
-                  Доставка транспортной компанией — 210 ₽
+                  <span>Доставка транспортной компанией</span> — <b>210</b> ₽
                       <input type="radio" name="radio" id="input-car-delivery" />
                       <p>(Данный вид доставки возможен при полной 
                           предоплате заказа. Срок доставки — 3–5 дней)
@@ -168,7 +169,7 @@
             </div>
             <div class="checkbox-choice-pickup">
               <label class="control control-radio">
-                  Самовывоз — 180 ₽
+                  <span>Самовывоз</span> — <b>180</b> ₽
                       <input type="radio" name="radio" id="input-pickup-delivery"/>
                       <p>Доставка до пункта самовывоза займет 2–3 дня</p>
                   <div class="control_indicator"></div>
@@ -176,7 +177,6 @@
             </div>            
         </div>
 
-        <!-- <h4>Пункт самовывоза</h4> -->
         <div class="pickup" id="input-pickup-delivery-visible"> 
           <h4>Пункт самовывоза</h4>       
           <label for="">Станция метро</label><br>
@@ -270,5 +270,6 @@
   </div>
     
 </footer>
+<script src="js/init.js"></script>
 </body>
 </html>
