@@ -1,9 +1,9 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  /* font converted using font-converter.net. thank you! */
 }
 
-/* font converted using font-converter.net. thank you! */
 @font-face {
   font-family: "Calibri";
   src: url("../fonts/Calibri.eot");
@@ -556,6 +556,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .contacts-lname-tel {
@@ -566,6 +567,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .contacts label {
@@ -585,7 +587,7 @@ header {
   font-size: 16px;
   font-weight: 400;
   padding-left: 11px;
-  outline-color: #e64545;
+  outline: none;
   border: 1px solid #c4b7b1;
   border-radius: 2px;
 }
@@ -618,6 +620,49 @@ header {
   font-family: Calibri;
   font-size: 16px;
   font-weight: 400;
+}
+
+.error-email, .error-name, .error-lname {
+  display: none;
+}
+
+.error-email p, .error-name p, .error-lname p {
+  width: 184px;
+  height: 21px;
+  margin: 0;
+  color: #958781;
+  font-family: Calibri;
+  font-size: 11px;
+  font-style: italic;
+  position: absolute;
+  bottom: 8px;
+  margin-left: 9px;
+}
+
+.error-name p {
+  width: 184px;
+  height: 21px;
+  margin: 0;
+  color: #958781;
+  font-family: Calibri;
+  font-size: 11px;
+  font-style: italic;
+  position: absolute;
+  top: 66px;
+  margin-left: 9px;
+}
+
+.error-lname p {
+  width: 184px;
+  height: 21px;
+  margin: 0;
+  color: #958781;
+  font-family: Calibri;
+  font-size: 11px;
+  font-style: italic;
+  position: absolute;
+  top: 66px;
+  right: -9px;
 }
 
 .delivery {
@@ -695,6 +740,10 @@ header {
   margin-top: 0;
   padding: 0;
   max-width: 100%;
+}
+
+.control-group {
+  margin-left: 30px;
 }
 
 .control {
@@ -781,6 +830,11 @@ header {
           flex-direction: column;
   margin-left: 30px;
   margin-bottom: 42px;
+  display: none;
+}
+
+.pickup h4 {
+  margin-left: 0;
 }
 
 .pickup label {
@@ -803,6 +857,7 @@ header {
   border: 1px solid #c4b7b1;
   border-radius: 2px;
   margin-bottom: 21px;
+  margin-top: 8px;
 }
 
 .comment {
