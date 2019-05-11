@@ -6,9 +6,8 @@
 /* font converted using font-converter.net. thank you! */
 @font-face {
   font-family: "Calibri";
-  src: url("./fonts/Calibri.eot");
-  src: url("./fonts/Calibri.eot?#iefix") format("embedded-opentype"), url("./fonts/Calibri.otf") format("opentype"), url("./fonts/Calibri.svg") format("svg"), url("./fonts/Calibri.ttf") format("truetype"), url("./fonts/Calibri.woff") format("woff"), url("./fonts/Calibri.woff2") format("woff2");
-  /* Modern Browsers */
+  src: url("../fonts/Calibri.eot");
+  src: url("../fonts/Calibri.eot?#iefix") format("embedded-opentype"), url("../fonts/Calibri.otf") format("opentype"), url("../fonts/Calibri.svg") format("svg"), url("../fonts/Calibri.ttf") format("truetype"), url("../fonts/Calibri.woff") format("woff"), url("../fonts/Calibri.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
