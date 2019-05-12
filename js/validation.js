@@ -65,7 +65,7 @@ $('#name').on('keyup', function() {
 
 $('#lname').on('keyup', function() {
   var lname = this.value;
-  if ((name.length < 2 ) || isCyrillic(name) == false) {     
+  if ((lname.length < 2 ) || isCyrillic(lname) == false) {     
     $(this).css({'border' : '2px solid #e64545'});
     $('.error-lname p').text('Это поле должно содержать фамилию на русском языке.');
     $('.error-lname').css({'display' : 'block'}); 
