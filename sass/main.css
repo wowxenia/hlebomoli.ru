@@ -7,8 +7,8 @@
 
 @font-face {
   font-family: "Calibri";
-  src: url("../fonts/Calibri.eot");
-  src: url("../fonts/Calibri.eot?#iefix") format("embedded-opentype"), url("../fonts/Calibri.otf") format("opentype"), url("../fonts/Calibri.svg") format("svg"), url("../fonts/Calibri.ttf") format("truetype"), url("../fonts/Calibri.woff") format("woff"), url("../fonts/Calibri.woff2") format("woff2");
+  src: url("../fonts/Calibri/Calibri.eot");
+  src: url("../fonts/Calibri/Calibri.eot?#iefix") format("embedded-opentype"), url("../fonts/Calibri/Calibri.otf") format("opentype"), url("../fonts/Calibri/Calibri.svg") format("svg"), url("../fonts/Calibri/Calibri.ttf") format("truetype"), url("../fonts/Calibri/Calibri.woff") format("woff"), url("../fonts/Calibri/Calibri.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -545,6 +545,7 @@ header {
   font-style: italic;
   margin: 0 0 33px 32px;
   padding-top: 45px;
+  font-weight: 200;
 }
 
 .checkout h3 {
@@ -554,6 +555,7 @@ header {
   font-size: 25px;
   font-style: italic;
   margin: 42px 0 21px 29px;
+  font-weight: 400;
 }
 
 .checkout h4 {
@@ -563,7 +565,12 @@ header {
   font-size: 19px;
   font-style: italic;
   line-height: 35px;
-  margin: 25px 0 15px 29px;
+  margin: 20px 0 3px 29px;
+  font-weight: 400;
+}
+
+.fix-margin {
+  margin: 0px 0 21px 29px !important;
 }
 
 .checkout-choice {
@@ -819,9 +826,9 @@ header {
 
 .checkbox-choice-courier label, .checkbox-choice-car label, .checkbox-choice-pickup label {
   font-size: 17px;
-  color: #5e2d16;
+  color: #461f02;
   font-family: Calibri;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .checkbox-choice-courier p, .checkbox-choice-car p, .checkbox-choice-pickup p {
@@ -910,6 +917,10 @@ header {
 .control:hover input:not([disabled]):checked ~ .control_indicator,
 .control input:checked:focus ~ .control_indicator {
   background: #ffffff;
+}
+
+.price-numbers {
+  font-weight: 400;
 }
 
 .pickup {
@@ -1153,6 +1164,11 @@ footer {
   font-size: 13px;
   font-weight: 400;
   margin: 0;
+  margin-top: -10px;
+}
+
+.social-media {
+  margin-top: -5px;
 }
 
 .social-media a {

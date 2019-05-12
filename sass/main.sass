@@ -3,11 +3,20 @@
   /* font converted using font-converter.net. thank you! */
 @font-face 
   font-family: "Calibri"
-  src: url("../fonts/Calibri.eot")
-  src: url("../fonts/Calibri.eot?#iefix") format("embedded-opentype"), url("../fonts/Calibri.otf") format("opentype"), url("../fonts/Calibri.svg") format("svg"),url("../fonts/Calibri.ttf") format("truetype"), url("../fonts/Calibri.woff") format("woff"), url("../fonts/Calibri.woff2") format("woff2")
+  src: url("../fonts/Calibri/Calibri.eot")
+  src: url("../fonts/Calibri/Calibri.eot?#iefix") format("embedded-opentype"), url("../fonts/Calibri/Calibri.otf") format("opentype"), url("../fonts/Calibri/Calibri.svg") format("svg"),url("../fonts/Calibri/Calibri.ttf") format("truetype"), url("../fonts/Calibri/Calibri.woff") format("woff"), url("../fonts/Calibri/Calibri.woff2") format("woff2")
   font-weight: normal
   font-style: normal
-  
+
+// @font-face 
+//   font-family: "Georgia"
+//   src: url("../fonts/Georgia/Georgia.eot")
+//   src: url("./fonts/9605.eot?#iefix") format("embedded-opentype"), url("../fonts/Georgia/Georgia.otf") format("opentype"), url("../fonts/Georgia/Georgia.svg") format("svg"), url("../fonts/Georgia/Georgia.ttf") format("truetype"), url("../fonts/Georgia/Georgia.woff") format("woff"), url("../fonts/Georgia/Georgia.woff2") format("woff2")
+//   font-weight: normal
+//   font-style: normal
+
+$brown: #461f02
+
 body
   margin: 0
   padding: 0
@@ -34,7 +43,7 @@ header
       position: absolute
       top: 244px
       z-index: 1
-      color: #461f02
+      color: $brown
       font-family: Calibri
       font-size: 16px
       font-weight: 400
@@ -56,7 +65,7 @@ header
       position: absolute
       top: 244px
       z-index: 1
-      color: #461f02
+      color: $brown
       font-family: Calibri
       font-size: 16px
       font-weight: 400
@@ -193,7 +202,7 @@ header
   width: 226px
   height: 43px
   &-number
-    color: #461f02
+    color: $brown
     font-family: Georgia
     font-size: 28px
     font-style: italic
@@ -226,7 +235,7 @@ header
       padding: 0
       a 
         text-decoration: none
-        color: #461f02
+        color: $brown
         font-family: Calibri
         font-size: 15px
         font-weight: 700
@@ -239,7 +248,7 @@ header
     justify-content: flex-end    
     &-price 
       margin: 16px 0 0
-      color: #461f02;
+      color: $brown;
       font-family: Calibri
       font-size: 17px
       font-weight: 700
@@ -299,12 +308,13 @@ header
   box-shadow: 0px 10px 26px -10px rgba(246,231,211,1)
   h3 
     padding: 18px 0 24px 18px 
-    color: #461f02
+    color: $brown
     font-family: Georgia
     font-size: 25px
     font-style: italic
     font-weight: normal
-    margin: 0!important    
+    margin: 0!important 
+     
   &-goods
     display: flex
     justify-content: space-between
@@ -319,7 +329,7 @@ header
       padding-left: 19px
       margin-bottom: 15px
     .goods-price
-      color: #461f02
+      color: $brown
       font-family: Calibri
       font-size: 14px
       font-weight: 400
@@ -346,7 +356,7 @@ header
         font-weight: 400
         margin: 0
       .cost-color
-        color: #461f02
+        color: $brown
         font-family: Calibri
         font-size: 14px
         font-weight: 400
@@ -359,13 +369,13 @@ header
     padding-left: 19px
     padding-right: 20px
     p 
-      color: #461f02
+      color: $brown
       font-family: Calibri
       font-size: 14px
       font-weight: 400
       margin: auto 0
     .full-cost
-      color: #461f02
+      color: $brown
       font-family: Calibri
       font-size: 20px
       font-weight: 700
@@ -379,27 +389,32 @@ header
   background: white
   h2 
     width: 80%
-    color: #461f02
+    color: $brown
     font-family: Georgia
     font-size: 35px
     font-style: italic
     margin: 0 0 33px 32px
     padding-top: 45px
+    font-weight: 200 
   h3
     width: 80% 
-    color: #461f02
+    color: $brown
     font-family: Georgia
     font-size: 25px
     font-style: italic
     margin: 42px 0 21px 29px
+    font-weight: 400 
   h4
     width: 80%
-    color: #461f02
+    color: $brown
     font-family: Georgia
     font-size: 19px
     font-style: italic
     line-height: 35px
-    margin: 25px 0 15px 29px
+    margin: 20px 0 3px 29px
+    font-weight: 400 
+.fix-margin
+  margin: 0px 0 21px 29px!important
 
 .checkout-choice
   width: 389px
@@ -411,7 +426,7 @@ header
   &-item1,
   &-item2
     width: 195px
-    color: #461f02
+    color: $brown
     font-family: Calibri
     font-size: 15px
     font-weight: 400    
@@ -550,7 +565,7 @@ header
     select, input
       width: 185px
       height: 35px
-      color: #461f02
+      color: $brown
       font-family: Calibri
       font-size: 16px
       font-weight: 400
@@ -573,9 +588,9 @@ header
     border: 1px dashed #f0e4ca
     label
       font-size: 17px 
-      color: #5e2d16
+      color: $brown
       font-family: Calibri
-      font-weight: 600
+      font-weight: 400
     p 
       color: #c4b7b1
       font-family: Calibri
@@ -644,6 +659,8 @@ header
 .control input:checked:focus ~ .control_indicator 
 	background: #ffffff 
 
+.price-numbers
+  font-weight: 400
 
 .pickup
   display: flex
@@ -662,7 +679,7 @@ header
   select
     width: 185px
     height: 35px
-    color: #461f02
+    color: $brown
     font-family: Calibri
     font-size: 16px
     font-weight: 400
@@ -736,7 +753,7 @@ footer
       width: 200px
       // height: 105px
     h4 
-      color: #461f02
+      color: $brown
       font-family: Georgia
       font-size: 17px
       font-style: italic
@@ -823,7 +840,9 @@ footer
       font-size: 13px
       font-weight: 400
       margin: 0
+      margin-top: -10px
   &-media
+    margin-top: -5px
     a
       width: 27px
       height: 27px
