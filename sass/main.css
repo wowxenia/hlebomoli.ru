@@ -298,10 +298,14 @@ header {
   display: inline;
 }
 
+.container {
+  height: auto;
+  position: relative;
+}
+
 .main-checkout {
   position: relative;
   width: 100%;
-  height: 1945px;
 }
 
 .wood {
@@ -313,14 +317,23 @@ header {
 }
 
 .b_panel {
-  position: absolute;
   display: block;
   overflow: hidden;
   width: 100%;
   min-height: 120px;
   max-width: 1030px;
-  margin: -142px auto 0;
-  background: url("../image/b_panel.png") no-repeat;
+  margin: -424px auto 0;
+}
+
+.b_panel:before {
+  background: url(../image/b_panel.png) no-repeat;
+  background-size: cover;
+  content: "";
+  height: 60px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: -25px;
 }
 
 .white-power {
@@ -469,7 +482,6 @@ header {
 
 .checkout {
   width: 1030px;
-  height: 1000px;
   margin: auto;
   position: relative;
   background: white;
