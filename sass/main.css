@@ -272,11 +272,16 @@ header {
 }
 
 .callback-text {
+  text-align: right;
+}
+
+.callback-text a {
+  text-decoration: none;
   color: #766259;
   font-family: Calibri;
   font-size: 13px;
   font-weight: 400;
-  text-align: right;
+  border-bottom: 1px dotted #766259;
 }
 
 .main-navigation {
@@ -802,7 +807,7 @@ header {
   font-size: 16px;
   font-weight: 400;
   padding-left: 11px;
-  outline-color: #e64545;
+  outline: none;
   border: 1px solid #c4b7b1;
   border-radius: 2px;
 }
@@ -1097,6 +1102,8 @@ footer {
   height: 40px;
   margin-top: 13px;
   padding-left: 14px;
+  outline: none;
+  border: 1px solid #c4b7b1;
 }
 
 .footer-main-item input[type=text]::-webkit-input-placeholder {
