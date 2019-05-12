@@ -22,8 +22,56 @@ header
 
 .map1, .map2
   display: none
+  position: relative
+  width: 390px
 
 .map1
+  p 
+    // padding: 0
+    position: relative
+    &:after
+      content: 'Ул. Кузнецкий мост, 9/10 стр.2, офис 204 Ежедневно с 12:00 до 22:00'
+      position: absolute
+      top: 244px
+      z-index: 1
+      color: #461f02
+      font-family: Calibri
+      font-size: 16px
+      font-weight: 400
+      padding: 0 40px 25px 22px 
+  &:after
+    content: ''
+    background: url('../image/gradient.png') no-repeat
+    background-size: cover
+    height: 150px
+    width: 390px
+    position: absolute
+    bottom: 0
+.map2
+  p 
+    // padding: 0
+    position: relative
+    &:after
+      content: 'Ул. Красного Маяка, 1к1 офис 101 Ежедневно с 12:00 до 22:00'
+      position: absolute
+      top: 244px
+      z-index: 1
+      color: #461f02
+      font-family: Calibri
+      font-size: 16px
+      font-weight: 400
+      padding: 0 70px 25px 22px 
+  &:after
+    content: ''
+    background: url('../image/gradient.png') no-repeat
+    background-size: cover
+    height: 150px
+    width: 390px
+    position: absolute
+    bottom: 0    
+    
+
+    
 
 .sprite
   background-image: url('../image/i.png')
@@ -201,9 +249,7 @@ header
       display: inline
 
 // Main
-.container 
-  height: auto
-  position: relative
+
 .main-checkout
   position: relative
   width: 100%
@@ -332,19 +378,22 @@ header
   position: relative
   background: white
   h2 
+    width: 80%
     color: #461f02
     font-family: Georgia
     font-size: 35px
     font-style: italic
     margin: 0 0 33px 32px
     padding-top: 45px
-  h3 
+  h3
+    width: 80% 
     color: #461f02
     font-family: Georgia
     font-size: 25px
     font-style: italic
     margin: 42px 0 21px 29px
   h4
+    width: 80%
     color: #461f02
     font-family: Georgia
     font-size: 19px

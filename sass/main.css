@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -29,6 +30,60 @@ header {
 
 .map1, .map2 {
   display: none;
+  position: relative;
+  width: 390px;
+}
+
+.map1 p {
+  position: relative;
+}
+
+.map1 p:after {
+  content: 'Ул. Кузнецкий мост, 9/10 стр.2, офис 204 Ежедневно с 12:00 до 22:00';
+  position: absolute;
+  top: 244px;
+  z-index: 1;
+  color: #461f02;
+  font-family: Calibri;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 40px 25px 22px;
+}
+
+.map1:after {
+  content: '';
+  background: url("../image/gradient.png") no-repeat;
+  background-size: cover;
+  height: 150px;
+  width: 390px;
+  position: absolute;
+  bottom: 0;
+}
+
+.map2 p {
+  position: relative;
+}
+
+.map2 p:after {
+  content: 'Ул. Красного Маяка, 1к1 офис 101 Ежедневно с 12:00 до 22:00';
+  position: absolute;
+  top: 244px;
+  z-index: 1;
+  color: #461f02;
+  font-family: Calibri;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 70px 25px 22px;
+}
+
+.map2:after {
+  content: '';
+  background: url("../image/gradient.png") no-repeat;
+  background-size: cover;
+  height: 150px;
+  width: 390px;
+  position: absolute;
+  bottom: 0;
 }
 
 .sprite {
@@ -298,11 +353,6 @@ header {
   display: inline;
 }
 
-.container {
-  height: auto;
-  position: relative;
-}
-
 .main-checkout {
   position: relative;
   width: 100%;
@@ -488,6 +538,7 @@ header {
 }
 
 .checkout h2 {
+  width: 80%;
   color: #461f02;
   font-family: Georgia;
   font-size: 35px;
@@ -497,6 +548,7 @@ header {
 }
 
 .checkout h3 {
+  width: 80%;
   color: #461f02;
   font-family: Georgia;
   font-size: 25px;
@@ -505,6 +557,7 @@ header {
 }
 
 .checkout h4 {
+  width: 80%;
   color: #461f02;
   font-family: Georgia;
   font-size: 19px;
